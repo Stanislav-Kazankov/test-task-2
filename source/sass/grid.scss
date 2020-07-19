@@ -28,10 +28,12 @@
     }
   }
 
+  &--float::after {
+      content: '';
+      display: table;
+      clear: both;
+  }
+
   background-color: $gray1;
   border: 1px solid $gray2;
-}
-
-.grid__clearfix {
-  clear: both;
 }
