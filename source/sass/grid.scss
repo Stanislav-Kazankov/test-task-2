@@ -1,0 +1,37 @@
+.grid {
+  width: 900px;
+  min-height: 500px;
+
+  &--flex {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+
+    .grid__cell:nth-child(6) {
+      align-self: center;
+    }
+
+    justify-content: flex-end;
+  }
+
+  &--ib {
+    .grid__cell {
+      display: inline-block;
+
+      vertical-align: top;
+    }
+  }
+
+  &--float {
+    .grid__cell {
+      float: left;
+    }
+  }
+
+  background-color: $gray1;
+  border: 1px solid $gray2;
+}
+
+.grid__clearfix {
+  clear: both;
+}

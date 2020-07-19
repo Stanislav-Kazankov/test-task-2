@@ -1,0 +1,22 @@
+.section {
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.section:nth-child(2n+1) {
+  background-color: $green1;
+}
+
+.section:nth-child(2n) {
+  background-color: $green2;
+}
+
+.section__grid {
+  @include reset-list();
+  @include make-center();
+}
+
+.section__h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
