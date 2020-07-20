@@ -29,9 +29,9 @@
   }
 
   &--float::after {
-      content: '';
-      display: table;
-      clear: both;
+    content: "";
+    display: table;
+    clear: both;
   }
 
   background-color: $gray1;
