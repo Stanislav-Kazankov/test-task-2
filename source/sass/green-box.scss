@@ -1,0 +1,9 @@
+.green-box {
+  background-color: $green3;
+  border: 1px solid $green4;
+
+  &--dim {
+    width: 200px;
+    min-height: 200px;
+  }
+}

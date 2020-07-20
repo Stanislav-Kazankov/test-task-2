@@ -1,22 +1,44 @@
 .section {
   padding-top: 20px;
   padding-bottom: 70px;
-}
 
-.section:nth-child(2n+1) {
-  background-color: $green1;
-}
+  &:nth-child(2n+1) {
+    background-color: $green1;
+  }
 
-.section:nth-child(2n) {
-  background-color: $green2;
-}
+  &:nth-child(2n) {
+    background-color: $green2;
+  }
 
-.section__grid {
-  @include reset-list();
-  @include make-center();
+  &:last-child {
+    min-height: 800px;
+  }
 }
 
 .section__h2 {
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+.section__grid {
+  @include init-list();
+}
+
+.section__table {
+  @include make-center();
+}
+
+.section__menu {
+  @include init-list();
+}
+
+.section__header {
+  margin-bottom: 35px;
+}
+
+.section__note {
+  font-size: 18px;
+  font-weight: 700;
+
+  color: $red;
 }
