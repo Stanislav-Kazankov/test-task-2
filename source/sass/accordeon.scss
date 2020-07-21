@@ -10,11 +10,11 @@
     border-bottom-color: $green3;
   }
 
-  > .accordeon__submenu {
+  .accordeon__submenu {
     display: none;
   }
 
-  > .accordeon__item-top .accordeon__toggle::after {
+  .accordeon__toggle::after {
     top: 6px;
 
     transform: rotate(-45deg);
