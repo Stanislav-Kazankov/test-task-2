@@ -4,20 +4,23 @@
   color: $green5;
 }
 
-.accordeon__item--closed {
-  .accordeon__item-top--level1 {
-    background-color: $green2;
-    border-bottom-color: $green3;
+.accordeon__item {
+  &--blank {
+    @include make-shadow();
   }
 
-  .accordeon__toggle::after {
-    top: 6px;
+  &--closed {
+    @include make-shadow();
 
-    transform: rotate(-45deg);
-  }
+    .accordeon__toggle::after {
+      top: 6px;
 
-  .accordeon__submenu {
-    display: none;
+      transform: rotate(-45deg);
+    }
+
+    .accordeon__submenu {
+      display: none;
+    }
   }
 }
 

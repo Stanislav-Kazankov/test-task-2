@@ -15,3 +15,9 @@
   @include reset-list();
   @include make-center();
 }
+
+@mixin make-shadow() {
+  .accordeon__item-top--level1 {
+    border-bottom-color: $green3;
+  }
+}

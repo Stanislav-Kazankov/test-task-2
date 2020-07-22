@@ -2,16 +2,25 @@
 
 (function () {
   var accordeon = document.querySelector('.section__menu');
-  var accordionItems = accordeon.querySelectorAll('.accordeon__item');
 
-  for (var i = 0; i < accordionItems.length; i++) {
-    var submenu = accordionItems[i].querySelector('.accordeon__submenu');
+  var level1ItemTops = accordeon.querySelectorAll('.accordeon__item-top--level1');
 
-    accordionItems[i].classList.add('accordeon__item--closed');
-    if (submenu !== null) {
-      var toggle = accordionItems[i].querySelector('.accordeon__toggle');
-      toggle.style.display = (submenu.querySelector('.accordeon__item') !== null) ? 'block' : 'none';
+  for (var i = 0; i < level1ItemTops.length; i++) {
+    var level1Item = level1ItemTops[i].parentNode;
+    if (level1Item.querySelector('.accordeon__item') === null) {
+      level1Item.classList.add('accordeon__item--blank');
     }
+  }
+
+  var accordeonItems = accordeon.querySelectorAll('.accordeon__item');
+
+  var submenus = accordeon.querySelectorAll('.accordeon__submenu');
+
+  for (var i = 0; i < submenus.length; i++) {
+    var parentItem = submenus[i].parentNode;
+    parentItem.classList.add('accordeon__item--closed');
+    var toggle = parentItem.querySelector('.accordeon__toggle');
+    toggle.style.display = (submenus[i].hasChildNodes()) ? 'block' : 'none';
   }
 
   accordeon.addEventListener('click', function (evt) {
