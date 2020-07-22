@@ -10,14 +10,14 @@
     border-bottom-color: $green3;
   }
 
-  .accordeon__submenu {
-    display: none;
-  }
-
   .accordeon__toggle::after {
     top: 6px;
 
     transform: rotate(-45deg);
+  }
+
+  .accordeon__submenu {
+    display: none;
   }
 }
 
@@ -56,10 +56,6 @@
     border-top-color: $green8;
     border-bottom-color: $green4;
   }
-}
-
-.accordeon__submenu {
-  @include reset-list();
 }
 
 .accordeon__link {
@@ -104,4 +100,8 @@
   &:focus:hover {
     outline: none;
   }
+}
+
+.accordeon__submenu {
+  @include reset-list();
 }

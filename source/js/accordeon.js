@@ -7,10 +7,10 @@
   for (var i = 0; i < accordionItems.length; i++) {
     var submenu = accordionItems[i].querySelector('.accordeon__submenu');
 
+    accordionItems[i].classList.add('accordeon__item--closed');
     if (submenu !== null) {
       var toggle = accordionItems[i].querySelector('.accordeon__toggle');
       toggle.style.display = (submenu.querySelector('.accordeon__item') !== null) ? 'block' : 'none';
-      accordionItems[i].classList.toggle('accordeon__item--closed');
     }
   }
 
